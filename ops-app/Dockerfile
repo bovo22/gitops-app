@@ -19,7 +19,7 @@ WORKDIR /app
 RUN addgroup -S spring && adduser -S spring -G spring
 
 # JAR 복사 및 권한 설정
-COPY --from=builder /build/target/*.jar app.jar
+COPY --from=builder /app/target/*.jar app.jar
 
 USER spring
 
